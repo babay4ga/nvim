@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =3
+let g:netrw_dirhist_3='/Users/kusabimaru/Desktop/minigrep/src'
+let g:netrw_dirhist_2='/Users/kusabimaru/Desktop/minigrep'
+let g:netrw_dirhist_1='/Users/kusabimaru/Desktop/minigrep/src'
+let g:netrw_dirhist_0='/Users/kusabimaru/Desktop/minigrep'
+let g:netrw_dirhist_9='/Users/kusabimaru/Desktop/minigrep/src'
+let g:netrw_dirhist_8='/Users/kusabimaru/Desktop/minigrep'
+let g:netrw_dirhist_7='/Users/kusabimaru/Desktop/minigrep/src'
+let g:netrw_dirhist_6='/Users/kusabimaru/Desktop/minigrep'
+let g:netrw_dirhist_5='/Users/kusabimaru/Desktop/minigrep/src'
+let g:netrw_dirhist_4='/Users/kusabimaru/Desktop/minigrep'
