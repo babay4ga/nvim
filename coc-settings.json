@@ -1,0 +1,16 @@
+{
+  "coc.preferences.formatOnSaveFiletypes": [
+    "javascript",
+    "json",
+    "jsx",
+    "typescript",
+    "vue",
+    "css",
+    "scss",
+    "markdown"
+  ],
+  "prettier.semi": false,
+  "prettier.singleQuote": true,
+  "explorer.width": 24,
+  "explorer.file.showHiddenFiles": true
+}

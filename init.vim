@@ -3,20 +3,19 @@ call plug#begin('~/.vim/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'arcticicestudio/nord-vim'
 Plug 'posva/vim-vue'
+Plug 'ianks/vim-tsx'
 Plug 'rust-lang/rust.vim'
 Plug 'mattn/emmet-vim'
 Plug 'Chiel92/vim-autoformat'
 Plug 'preservim/nerdcommenter'
-Plug 'prettier/vim-prettier'
 Plug 'Yggdroot/indentLine'
 Plug 'mileszs/ack.vim'
 Plug 'vim-syntastic/syntastic'
-Plug 'preservim/nerdcommenter'
 
 call plug#end()
 
 set nocompatible
-filetype off
+set cole&
 
 colorscheme nord
 
@@ -37,20 +36,22 @@ set shiftwidth=4
 set expandtab
 set autoindent
 filetype plugin indent on
-
 syntax on
-
 highlight LineNr ctermfg=darkGray
 
 let g:indentLine_char = '·'
 
 inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
+            \ pumvisible() ? "\<C-n>" :
+            \ <SID>check_back_space() ? "\<TAB>" :
+            \ coc#refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
+    let col = col('.') - 1
+    return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
+
+:nnoremap <space>e :CocCommand explorer<CR>
+
+command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
